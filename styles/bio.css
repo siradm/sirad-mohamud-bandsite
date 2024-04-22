@@ -41,7 +41,7 @@
     font-size: 1.5rem;
     line-height: 2rem;
     text-align: left;
-    font-family: "avenir-demi";
+    font-family: "avenir-bold";
     padding: 1.5rem 1rem 1rem 1rem;
     color: #323232;
   
@@ -51,7 +51,7 @@
     .section-header {
       font-size: 2.25rem;
       line-height: 2.75rem;
-      font-family: "avenir-demi";
+      font-family: "avenir-bold";
       font-weight: 700;
       text-align: left;
       padding: 2.25rem;
