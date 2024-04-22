@@ -316,6 +316,180 @@
     }
   }
 
+// Comment Section Styles // 
+
+.comment-section {
+  @include flexDirection(column);
+  padding: 0 1rem;
+  position: relative;
+
+  @include tablet {
+    padding: 0 2.25rem;
+    margin-bottom: 2.25rem;
+  }
+
+  @include desktop {
+    margin: 2.25rem 6.5rem;
+  }
+
+  &__header {
+    @include mPrimaryHeader;
+    padding-top: 1.5rem;
+
+    @include tablet {
+      @include sectionHeader;
+    }
+  }
+
+  &__avatar {
+    border-radius: 50%;
+    max-width: 2.25rem;
+    min-width: none;
+    max-height: 2.25rem;
+    min-height: 2.25rem;
+    margin-top: 3.25rem;
+
+    @include tablet {
+      margin-left: 4rem;
+      max-width: 3rem;
+      max-height: 3rem;
+      min-height: 3rem;
+    }
+
+    @include desktop {
+      margin-left: 15.75rem;
+    }
+  }
+
+  &__form-container {
+    margin-left: 3rem;
+    margin-top: -5rem;
+
+    @include tablet {
+      padding: 0 4.5rem;
+      margin-top: -5.75rem;
+    }
+
+    @include desktop {
+      padding: 0 16.5rem;
+    }
+  }
+}
+
+// Form // 
+
+.comment-form {
+  @include flexDirection(column);
+
+  &__label {
+    @include mSecondaryHeader;
+    font-size: 0.75rem;
+    color: $silver;
+    padding: 1rem 0 0.25rem 0;
+  }
+}
+
+#comment-form__name {
+  @include mFormFieldDimensions;
+  @include mBodyCopy;
+  background-color: $alabaster;
+  color: $bandsite-darkblack;
+
+  &:focus {
+    @include activeFormField;
+  }
+}
+
+#comment-form__box {
+  @include mFormFieldDimensions;
+  @include mBodyCopy;
+  height: 7rem;
+  background-color: $alabaster;
+  color: $bandsite-darkblack;
+
+  &:focus {
+    @include activeFormField;
+  }
+}
+
+#comment-form__button {
+  @include mCTAButtonDefault;
+
+  &:hover {
+    @include CTAButtonHover;
+  }
+
+  @include tablet {
+    @include CTAButtonDefault;
+    align-self: flex-end;
+  }
+}
+
+// Comment // 
+
+.comment-card {
+  @include flexDirection(column);
+  border-top: 1px solid $silver;
+  border-bottom: 1px solid $silver;
+  position: relative;
+
+  @include tablet {
+    margin: 0 4.5rem;
+  }
+
+  @include desktop {
+    margin: 0 16.5rem;
+  }
+
+  &__avatar {
+    background-color: $mercury;
+    border-radius: 50%;
+    max-width: 2.25rem;
+    max-height: 2.25rem;
+    margin-top: 1rem;
+    min-height: 2.25rem;
+
+    @include tablet {
+      max-height: 3rem;
+      min-height: 2.75rem;
+      max-width: 3rem;
+      min-width: none;
+    }
+  }
+
+  &__name {
+    @include mSecondaryHeader;
+    margin-top: 1rem;
+    position: absolute;
+    left: 3rem;
+
+    @include tablet {
+      left: 4rem;
+    }
+  }
+
+  &__date {
+    @include mBodyCopy;
+    color: $silver;
+    position: absolute;
+    right: 0;
+    margin-top: 1rem;
+  }
+
+  &__text {
+    @include mBodyCopy;
+    font-weight: bold;
+    margin-left: 3rem;
+    margin-bottom: 1rem;
+    margin-top: -0.5rem;
+
+    @include tablet {
+      margin-left: 4rem;
+      margin-top: -1rem;
+    }
+  }
+}
+
 // Footer // 
 
 .footer {
